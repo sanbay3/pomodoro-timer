@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- トマトの実（アプリの作業モードと同じ rose-500） -->
+  <ellipse cx="32" cy="38" rx="27" ry="23" fill="#f43f5e"/>
+  <!-- つやのハイライト -->
+  <ellipse cx="19" cy="31" rx="4.5" ry="7.5" fill="#fff" fill-opacity="0.35" transform="rotate(30 19 31)"/>
+  <!-- ヘタ（休憩モードと同じ teal 系） -->
+  <g fill="#14b8a6">
+    <ellipse cx="22" cy="18" rx="10" ry="4" transform="rotate(-20 22 18)"/>
+    <ellipse cx="42" cy="18" rx="10" ry="4" transform="rotate(20 42 18)"/>
+    <ellipse cx="32" cy="21" rx="4" ry="7"/>
+    <rect x="29.5" y="5" width="5" height="13" rx="2.5"/>
+  </g>
+</svg>
