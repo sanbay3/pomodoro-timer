@@ -13,6 +13,10 @@
 - 残り時間を MM:SS 形式で大きく表示し、円形のプログレスリングで進み具合を表示
 - ブラウザのタブ名にも残り時間を表示
 - タイマー終了時のブラウザ通知（許可はボタンから取得。通知が使えない環境でもタイマーは動作）
+- タイマー終了時のチャイム（作業終了と休憩終了で異なる音。オン/オフ可能）
+- タイマー中の画面スリープ防止（対応ブラウザのみ。オン/オフ可能）
+- 再読み込みやタブを閉じても、進行中のタイマーを続きから再開
+- 複数タブで開いても、タイマー・記録・設定を同期（完了数の二重カウントを防止）
 - 今日の完了数・累計の記録（localStorage に保存）
 - モバイル対応
 
@@ -22,5 +26,5 @@
 - React 19（Hooks / カスタムフック / useEffectEvent）
 - Tailwind CSS 4
 - JavaScript
-- Web API: Notification API / localStorage
+- Web API: Notification API / Web Audio API / Screen Wake Lock API / localStorage（storage イベント）
 - デプロイ: Cloudflare Pages
