@@ -11,7 +11,7 @@ import { THEMES } from "@/components/theme";
 import { usePomodoroTimer } from "@/lib/usePomodoroTimer";
 import { useStorageListener } from "@/lib/useStorageListener";
 import { isWakeLockSupported, useWakeLock } from "@/lib/useWakeLock";
-import { MODES, formatTime } from "@/lib/timer";
+import { MODES } from "@/lib/timer";
 import {
   STATS_STORAGE_KEY,
   addCompletedSession,
@@ -89,14 +89,6 @@ export default function PomodoroApp() {
   useWakeLock(settings.keepScreenOn && timer.isRunning);
   const theme = THEMES[timer.mode];
   const modeLabel = MODES[timer.mode].label;
-
-  // ブラウザのタブのタイトルに残り時間を出す。
-  // 別のタブを見ていても、タブ名で残り時間を確認できる。
-  // document.title は React の外にあるものなので、useEffect で「同期」させる。
-  const timeText = formatTime(timer.remainingSeconds);
-  useEffect(() => {
-    document.title = `${timeText} ${modeLabel} | ポモドーロタイマー`;
-  }, [timeText, modeLabel]);
 
   const handleStart = () => {
     setFinishMessage(null);
